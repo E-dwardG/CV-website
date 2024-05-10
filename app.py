@@ -2,7 +2,6 @@ import streamlit as st
 from pathlib import Path
 from PIL import Image
 import requests
-from streamlit_lottie import st_lottie
 
 st.set_page_config(page_title="Digital CV | Edward Gilbert", page_icon=":computer:", layout="wide")
 
