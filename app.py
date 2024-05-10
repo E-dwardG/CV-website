@@ -5,19 +5,12 @@ import requests
 
 st.set_page_config(page_title="Digital CV | Edward Gilbert", page_icon=":computer:", layout="wide")
 
-def load_lottieurl(url):
-    r = requests.get(url)
-    if r.status_code != 200:
-        return None
-    return r.json()
-
 def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 #load assets
 local_css("styles/style.css")
-lottie_animation = "https://lottie.host/e925d7f9-d7c3-49c7-bfcd-9faa560f419b/oLu1VR2VMb.json"
 current_dir = Path(__file__).parent if "__file__" in locals() else Path.cwd()
 resume_file = current_dir / "assets" / "CV.pdf"
 with open(resume_file, "rb") as pdf_file:
@@ -58,8 +51,6 @@ with st.container():
         st.write(
             """I am a conscientious fourth-year integrated Mathematics Master's student at the University of Warwick with key interests in combinatorics, graph theory, game theory as well as population and disease modelling. I have a strong desire to apply my strong mathematical modelling skills gained from the study of epidemiology to the world of financial markets or insurance."""
         )
-    with R_col:
-        st_lottie(lottie_animation, height=350, key="analysis")
 
 with st.container():
     st.write("---")
