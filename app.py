@@ -57,10 +57,34 @@ with st.container():
         st.header("About me")
         st.write("##")
         st.write(
-            """I am a conscientious fourth-year integrated Mathematics Master's student at the University of Warwick with key interests in combinatorics, graph theory, game theory as well as population and disease modelling. I have a strong desire to apply my strong mathematical modelling skills gained from the study of epidemiology to the world of financial markets or biotechnology."""
+            """I am a conscientious fourth-year integrated Mathematics Master's student at the University of Warwick with key interests in combinatorics, graph theory, game theory as well as population and disease modelling. I have a strong desire to apply my strong mathematical modelling skills gained from the study of epidemiology to the world of financial markets or insurance."""
         )
     with R_col:
         st_lottie(lottie_animation, height=350, key="analysis")
+
+with st.container():
+    st.write("---")
+    L_col, R_col = st.columns((3, 2))
+    with L_col:
+        st.header("Technical skills")
+        st.write("##")
+        st.write(
+            """
+            - Strong scientific programming experience with: Python (numpy, scipy, pandas), Lean & R (ggplot2, dplyr) 
+            - Strong software expertise with Linux & Github
+            - Deep knowledge of: Stochastic modelling, Graph theory, Game theory, Discrete mathematics & algorithms
+        """
+        )
+    with R_col:
+        st.header("Soft skills")
+        st.write("##")
+        st.write(
+            """
+            - Confident presenter with years of radio and drama experience.
+            - Organizational and project management skills gained from charity fundraisers, volunteering, and the leadership of university societies.
+
+        """
+        )
 
 with st.container():
     st.write("---")
@@ -70,8 +94,9 @@ with st.container():
     with L_col:
         st.write(
             """
-            - Wrote an essay on combinatorial game theory after having self-learnt the subject in second year. 
-            The essay went into the surprising link between the games Nim and Hackenbush and how one can take some of the strategies used in the game Nim and transform them into strategies for Hackenbush.
+            - I wrote an essay on combinatorial game theory after having self-learnt the subject in second year. 
+            The essay showed links between two games and showed how strategies could be transferred between them. 
+            This involved strategic thinking, problem solving and research.
             """
         )
     with M_col:
@@ -86,22 +111,11 @@ with st.container():
     with L_col:
         st.write(
             """
-            - I created a project comparing the efficiency of the Hu-Kang-Othmer and the Gillespie algorithms for stochastic modelling, 
-            using differing setups with varying amounts of rules and subrules. 
-            This required creating various extreme models to really test the two methods, 
-            showing that given enough rules and a clever subrule division, 
-            the Hu-Kang-Othmer method will in fact start to become more efficient than Gillespie.
+            - I created a project comparing the efficiency of the Hu-Kang-Othmer and the Gillespie algorithms for stochastic modelling. 
+            This involved stochastic modelling, setting up testing scenarios, as well as gathering and presenting data.
             """
         )
-    with M_col:
-        st.download_button(
-                label="Placeholder",
-                data=PDFbyte_hackenbush_project,
-                file_name=hackenbush_project_file.name,
-                mime="application/octet-stream",
-            )
-    with R_col:
-        st.write("[Github Repository :computer:](https://github.com/E-dwardG/Gillespie-vs-HKO)")
+
     #Masters project
     L_col, M_col, R_col = st.columns((5, 1, 1), gap="small")
     with L_col:
@@ -111,17 +125,45 @@ with st.container():
             It involved use of diffusion approximations, as well as a deep understanding of stochastic processes.
             """
         )
-    with M_col:
-        st.download_button(
-                label="Placeholder2",
-                data=PDFbyte_hackenbush_project,
-                file_name=hackenbush_project_file.name,
-                mime="application/octet-stream",
-            )
+    
+    st.write("Further resources will be posted here as my degree finishes and I am told I am allowed to do so.")
+
+with st.container():
+    st.write("---")
+    L_col, R_col = st.columns(2)
+    with L_col:
+        st.header("Qualifications")
+        st.write("Duke of Edinburgh silver award")
+        st.write(
+            """
+            A-Levels:
+            - Mathematics A*
+            - Further Mathematics A*
+            - Physics A*
+            - Economics A*
+        """
+        )
+        st.header("Employment history")
+        st.write(
+            """
+        I have worked at a local arcade for Japanese multinational Bandai Namco for the past three summers. 
+        This involved not just punctuality, reliability and flexibility, but also interactions with customers, 
+        a highly demanding fast paced environment, as well as practical problem solving. 
+        """
+        )
     with R_col:
-        st.write("[Github Repository :computer:](https://github.com/E-dwardG/Disease-Persistence)")
+        st.header("Extracurricular activities")
+        st.write(
+            """
+            - President for Warwick Offbeat society from March 2023 to March 2024: Involves organizing various events and making sure all aspects of the society from marketing to welfare are running smoothly and as a team. This helped build confidence and teamwork skills.
+            - Presenter for Radio at Warwick from September 2022 to Present: Required me to be highly articulate, plan shows in advance, present on air, as well as manage problems when various technical issues have arisen.
+            - Keen interest in the worlds of global economics, business and assets driven from taking various economics modules at university as well as consuming media and papers surrounding the subject.
+            - Keen interest in technology, computer science and programming, encouraged by taking various modules on the subject, as well as having learnt a lot of discrete mathematics beyond university.
 
+        """
+        )
 
+    
 #contact
 with st.container():
     st.write("---")
