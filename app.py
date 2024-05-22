@@ -123,6 +123,7 @@ with st.container():
     L_col, R_col = st.columns(2)
     with L_col:
         st.header("Qualifications")
+        st.write("Warwick Mmath 2024 first class honours (predicted)")
         st.write("Duke of Edinburgh silver award")
         st.write(
             """
